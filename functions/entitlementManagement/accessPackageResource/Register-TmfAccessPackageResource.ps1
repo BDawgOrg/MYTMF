@@ -66,7 +66,7 @@ function Register-TmfAccessPackageResource
 				"AadGroup" {
 					 $originId = Resolve-Group -InputReference $this.resourceIdentifier -DontFailIfNotExisting
 				}
-				"AadApplication" {
+				"Application" {
 					$originId = Resolve-Application -InputReference $this.resourceIdentifier -DontFailIfNotExisting
 			   }
 				default {
