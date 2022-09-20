@@ -65,10 +65,7 @@ function Register-TmfAccessPackageResource
 			switch ($this.resourceType) { # Resolve originId (eg. get the ObjectId of a group resource)
 				"AadGroup" {
 					 $originId = Resolve-Group -InputReference $this.resourceIdentifier -DontFailIfNotExisting
-				}
-				"Application" {
-					$originId = Resolve-Application -InputReference $this.resourceIdentifier -DontFailIfNotExisting
-			   }
+				}				
 				default {
 					$originId = $this.resourceIdentifier
 				}
